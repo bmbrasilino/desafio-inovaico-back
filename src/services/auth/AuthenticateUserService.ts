@@ -10,10 +10,10 @@ interface IRequest {
 
 interface IResponse {
   user: {
-    name: string,
-    email: string
+    name: string | undefined,
+    email: string  | undefined
   },
-  token: string
+  token: string  | undefined
 }
 
 class  AuthenticateUserService {
@@ -38,15 +38,14 @@ class  AuthenticateUserService {
       expiresIn: "1d"
     });
     
-    // @ts-ignore
-    const tokenReturn: IRequest = {
+    const tokenReturn: IResponse = {
       user: {
-       user: user.name,
+        name: user.name,
         email: user.email,
       },
       token,
     }
-    // @ts-ignore
+    
     return tokenReturn;
   }
 }
