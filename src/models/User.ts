@@ -1,6 +1,4 @@
-import { v4 as uuidV4 } from "uuid";
 import {Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, OneToMany, JoinColumn, ManyToOne} from "typeorm";
-import {Appointment} from "./Appointment";
 
 @Entity("users")
 class User {
@@ -21,11 +19,5 @@ class User {
   
   @CreateDateColumn()
   created_at: Date | undefined;
-  
-  constructor() {
-    if (!this.id) {
-      this.id = uuidV4();
-    }
-  }
 }
 export {User};

@@ -1,4 +1,3 @@
-import { v4 as uuidV4 } from "uuid";
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from "typeorm";
 import { Patient } from "./Patient";
 // @ts-ignore
@@ -23,10 +22,5 @@ class AppointmentNote {
   @CreateDateColumn()
   created_at: Date | undefined;
 
-  constructor() {
-    if (!this.id) {
-      this.id = uuidV4();
-    }
-  }
 }
 export {AppointmentNote};
