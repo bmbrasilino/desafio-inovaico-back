@@ -1,20 +1,3 @@
-// {
-//   "username": "docker",
-//   "password": "1234",
-//   
-//   "type": "postgres",
-//   "host": "localhost",
-//   "port": "5432:5432", 
-//   "database": "postgres",
-//   "entities": [
-//     "./src/models/*.ts"
-//   ],
-//   "migrations": ["./src/database/migrations/*.ts"],
-//   "cli": {
-//     "migrationsDir": "./src/database/migrations"
-//   }
-//}
-
 {
   "username": "odydafagrftwpb",
   "password": "bad62167423431c9dc1f0e37f94177a1de0a61fe619402c0ad955d0e84d0c345",
