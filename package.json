@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "ts-node-dev  --transpile-only --ignore-watch node_modules src/server.ts",
-    "start": "node dist/server.js",
+    "start": "node dist/server.js npm run typeorm migrate:run",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "keywords": [],
